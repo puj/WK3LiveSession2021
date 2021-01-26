@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 3. Hero video -->
+    <!-- Comment Hero image part + uncomment this part for best result -->
+
+    <!-- <header class="header">
+        <video class="hero-video" loop autoplay muted>
+            <source src="./assets/videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+            <source src="./assets/videos/SampleVideo_1280x720_1mb.webm" type="video/webm">
+
+            <source src="./assets/videos/SampleVideo_720x480_1mb.mp4" type="video/mp4" media="(max-width: 900px)">
+            <source src="./assets/videos/SampleVideo_720x480_1mb.webm" type="video/webm" media="(max-width: 900px)">
+
+            <source src="./assets/videos/SampleVideo_360x240_1mb.mp4" type="video/mp4" media="(max-width: 600px)">
+            <source src="./assets/videos/SampleVideo_360x240_1mb.webm" type="video/webm" media="(max-width: 600px)">
+
+            <p>This browser doesn't support video...</p>
+        </video>
+        <h1 class="hero-text">Hero section</h3>    
+    </header> -->
+
+    <!-- 2. Hero image -->
+
+    <header class="header">
+        <picture>
+            <source srcset="./assets/images/mobile.jpg" media="(max-width: 600px)" />
+            <source srcset="./assets/images/tablet.jpg" media="(max-width: 900px)" />
+            <img class="hero-image" src="./assets/images/desktop.jpg" alt="Hero image" />
+        </picture>
+        <h1 class="hero-text">Hero section</h3>    
+    </header>
+
+    <!-- 1. Accordion -->
+
+    <div class="accordion">
+        <h3 id="accordion-header-1" class="accordion-header">
+            Header 1
+        </h3>
+        <div id="accordion-content-1" class="accordion-content">
+            <p class="accordion-text">
+                Text of the accordion 1
+            </p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <h3 id="accordion-header-2" class="accordion-header">
+            Header 2
+        </h3>
+        <div id="accordion-content-2" class="accordion-content">
+            <p class="accordion-text">
+                Text of the accordion 2
+            </p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <h3 id="accordion-header-3" class="accordion-header">
+            Header 3
+        </h3>
+        <div id="accordion-content-3" class="accordion-content">
+            <p class="accordion-text">
+                Text of the accordion 3
+            </p>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
