@@ -8,13 +8,29 @@ const accordionHeader3 = document.getElementById('accordion-header-3');
 const accordionContent3 = document.getElementById('accordion-content-3');
 
 accordionHeader1.addEventListener('click', () => {
-    accordionContent1.classList.toggle('accordion-selected');
+  /*
+  Alternative 1: Open only one at a time
+  accordionContent1.classList.add('accordion-selected');
+  accordionContent2.classList.remove('accordion-selected');
+  accordionContent3.classList.remove('accordion-selected');
+  */
+
+  /*
+  Alternative 2: Open only one at a time AND close when clicked again
+ */
+  accordionContent1.classList.toggle('accordion-selected');
+  accordionContent2.classList.remove('accordion-selected');
+  accordionContent3.classList.remove('accordion-selected');
 });
 
 accordionHeader2.addEventListener('click', () => {
-    accordionContent2.classList.toggle('accordion-selected');
+  accordionContent1.classList.remove('accordion-selected');
+  accordionContent2.classList.toggle('accordion-selected');
+  accordionContent3.classList.remove('accordion-selected');
 });
 
 accordionHeader3.addEventListener('click', () => {
-    accordionContent3.classList.toggle('accordion-selected');
+  accordionContent1.classList.remove('accordion-selected');
+  accordionContent2.classList.remove('accordion-selected');
+  accordionContent3.classList.toggle('accordion-selected');
 });

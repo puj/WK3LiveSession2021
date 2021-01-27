@@ -38,6 +38,66 @@
         <h1 class="hero-text">Hero section</h3>    
     </header>
 
+    <!-- 3. Form -->
+    <!-- 
+        The default action of a form is to simply refresh the page.  
+        action = Where
+        method = How
+        
+        *Where* the submission is sent and *how* it is sent.
+     -->
+    <form class="form-survey" action="https://httpbin.org/anything" method="POST">
+        <!-- Label alternative 1 -->
+        <label>
+            Name: <input name="form-survey-name" type="text" required> 
+        </label>
+        <!-- Label alternative 2 -->
+        <!-- <section>
+            <label for="form-name">Name:</label>
+            <input id="form-name" type="text"></input>
+        </section> -->
+
+        <!-- 
+            type="email" gives us some simple validation for email addresses
+         -->
+        <label>
+            E-Mail: <input name="form-survey-email" type="email" required > 
+        </label>
+
+        <!-- 
+            type="password" automatically masks our input
+         -->
+        <label>
+            Password: <input name="form-survey-password" type="password" required> 
+        </label>
+
+        <h3>
+            What's your favorite free-time activity?
+        </h3>
+
+        <!-- 
+            Wrapping the radio group with a section
+            Allows us to layout each option easier using flexbox  
+        -->
+        <section class="form-survey-radio-group">
+            <label>
+                Video Games <input type="radio" value="games" name="form-survey-favorite" required> 
+            </label>
+            <label>
+                VHS Tapes <input type="radio" value="vhs" name="form-survey-favorite" required> 
+            </label>
+            <label>
+                Music <input type="radio" value="music"
+                name="form-survey-favorite" required>
+            </label>
+        </section>
+
+        <!--
+             Remember: type="button" doesn't trigger the form submission
+         -->
+        <input type="submit" value="Submit"></input>
+    </form>
+
     <!-- 1. Accordion -->
 
     <div class="accordion">
